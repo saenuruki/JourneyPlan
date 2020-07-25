@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		BA06033224CBDA9000459A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06033024CBDA9000459A49 /* LaunchScreen.storyboard */; };
 		BA06033D24CBDA9100459A49 /* JourneyPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06033C24CBDA9100459A49 /* JourneyPlanTests.swift */; };
 		BA06034824CBDA9100459A49 /* JourneyPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06034724CBDA9100459A49 /* JourneyPlanUITests.swift */; };
+		BA06035624CBEEB300459A49 /* LocationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06035524CBEEB300459A49 /* LocationTableCell.swift */; };
+		BA06035824CBEEBC00459A49 /* LocationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA06035724CBEEBC00459A49 /* LocationTableCell.xib */; };
+		BA06035A24CBEEDC00459A49 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06035924CBEEDC00459A49 /* MainViewModel.swift */; };
 		CD8311263896B8E569FC6D76 /* Pods_JourneyPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3003E302A5FFC8BCF2B0126E /* Pods_JourneyPlan.framework */; };
 		EC817956DE1700F4D686ACB9 /* Pods_JourneyPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C747F37D13F4C373B83A57 /* Pods_JourneyPlanTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		BA06034324CBDA9100459A49 /* JourneyPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA06034724CBDA9100459A49 /* JourneyPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlanUITests.swift; sourceTree = "<group>"; };
 		BA06034924CBDA9100459A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA06035524CBEEB300459A49 /* LocationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableCell.swift; sourceTree = "<group>"; };
+		BA06035724CBEEBC00459A49 /* LocationTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableCell.xib; sourceTree = "<group>"; };
+		BA06035924CBEEDC00459A49 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C3BE3094E2CD57A4C26450E6 /* Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0195BD2D670701E45F72A84 /* Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F4CB939327C80E9FF3BCF8FC /* Pods-JourneyPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +117,6 @@
 				0678B37CDC7BA83120E05AB3 /* Pods-JourneyPlanTests.debug.xcconfig */,
 				6026ECD7D461C5BA965D02B5 /* Pods-JourneyPlanTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,6 +152,9 @@
 				BA06032E24CBDA9000459A49 /* Assets.xcassets */,
 				BA06033024CBDA9000459A49 /* LaunchScreen.storyboard */,
 				BA06033324CBDA9000459A49 /* Info.plist */,
+				BA06035524CBEEB300459A49 /* LocationTableCell.swift */,
+				BA06035724CBEEBC00459A49 /* LocationTableCell.xib */,
+				BA06035924CBEEDC00459A49 /* MainViewModel.swift */,
 			);
 			path = JourneyPlan;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				BA06033224CBDA9000459A49 /* LaunchScreen.storyboard in Resources */,
 				BA06032F24CBDA9000459A49 /* Assets.xcassets in Resources */,
 				BA06032D24CBDA8F00459A49 /* Main.storyboard in Resources */,
+				BA06035824CBEEBC00459A49 /* LocationTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,9 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA06035A24CBEEDC00459A49 /* MainViewModel.swift in Sources */,
 				BA06032A24CBDA8F00459A49 /* ViewController.swift in Sources */,
 				BA06032624CBDA8F00459A49 /* AppDelegate.swift in Sources */,
 				BA06032824CBDA8F00459A49 /* SceneDelegate.swift in Sources */,
+				BA06035624CBEEB300459A49 /* LocationTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

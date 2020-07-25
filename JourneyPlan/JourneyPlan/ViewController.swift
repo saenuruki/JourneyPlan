@@ -12,15 +12,18 @@ import EMTNeumorphicView
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nlpTextView: UITextView!
     @IBOutlet weak var textFieldView: EMTNeumorphicView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resetButton: EMTNeumorphicButton!
     @IBOutlet weak var searchButton: EMTNeumorphicButton!
+    @IBOutlet weak var placeholderImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureTableView()
+        configureTextView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,18 +36,21 @@ class ViewController: UIViewController {
         textFieldView.neumorphicLayer?.cornerRadius = 24
         textFieldView.neumorphicLayer?.depthType = .concave
         textFieldView.neumorphicLayer?.elementDepth = 4
+        textFieldView.neumorphicLayer?.edged = true
         
         resetButton.contentVerticalAlignment = .fill
         resetButton.contentHorizontalAlignment = .fill
         resetButton.imageEdgeInsets = UIEdgeInsets(top: 26, left: 24, bottom: 22, right: 24)
         resetButton.neumorphicLayer?.elementBackgroundColor = UIColor.white.cgColor
         resetButton.neumorphicLayer?.cornerRadius = 30
+        resetButton.neumorphicLayer?.edged = true
         
         searchButton.contentVerticalAlignment = .fill
         searchButton.contentHorizontalAlignment = .fill
         searchButton.imageEdgeInsets = UIEdgeInsets(top: 26, left: 24, bottom: 22, right: 24)
         searchButton.neumorphicLayer?.elementBackgroundColor = UIColor.white.cgColor
         searchButton.neumorphicLayer?.cornerRadius = 30
+        searchButton.neumorphicLayer?.edged = true
     }
     
     func configureTableView() {
@@ -55,8 +61,12 @@ class ViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.reloadData()
     }
+    
+    func configureTextView() {
+        nlpTextView.delegate = self
+        nlpTextView.backgroundColor = .white
+    }
 }
-
 
 extension ViewController: UITableViewDataSource {
 
@@ -125,5 +135,16 @@ extension ViewController: UITableViewDelegate {
 //        default:
 //            return 0
 //        }
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        // ここでカーソル開始位置を判断して、キーボードの高さを取得して、キーボードに隠れそうだったらScrollする
+        return true
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
     }
 }
