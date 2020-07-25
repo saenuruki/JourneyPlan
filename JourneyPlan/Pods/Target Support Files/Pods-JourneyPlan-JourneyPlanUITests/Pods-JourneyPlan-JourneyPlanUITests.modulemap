@@ -1,0 +1,6 @@
+framework module Pods_JourneyPlan_JourneyPlanUITests {
+  umbrella header "Pods-JourneyPlan-JourneyPlanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FF2D2B3D1586593FBBD4C46 /* Pods_JourneyPlan_JourneyPlanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBA81121403FD4415534222 /* Pods_JourneyPlan_JourneyPlanUITests.framework */; };
 		BA06032624CBDA8F00459A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06032524CBDA8F00459A49 /* AppDelegate.swift */; };
 		BA06032824CBDA8F00459A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06032724CBDA8F00459A49 /* SceneDelegate.swift */; };
 		BA06032A24CBDA8F00459A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06032924CBDA8F00459A49 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		BA06033224CBDA9000459A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06033024CBDA9000459A49 /* LaunchScreen.storyboard */; };
 		BA06033D24CBDA9100459A49 /* JourneyPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06033C24CBDA9100459A49 /* JourneyPlanTests.swift */; };
 		BA06034824CBDA9100459A49 /* JourneyPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06034724CBDA9100459A49 /* JourneyPlanUITests.swift */; };
+		CD8311263896B8E569FC6D76 /* Pods_JourneyPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3003E302A5FFC8BCF2B0126E /* Pods_JourneyPlan.framework */; };
+		EC817956DE1700F4D686ACB9 /* Pods_JourneyPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C747F37D13F4C373B83A57 /* Pods_JourneyPlanTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0678B37CDC7BA83120E05AB3 /* Pods-JourneyPlanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlanTests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlanTests/Pods-JourneyPlanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C2243A66A60F2420F428F6F /* Pods-JourneyPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan.release.xcconfig"; path = "Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan.release.xcconfig"; sourceTree = "<group>"; };
+		14C747F37D13F4C373B83A57 /* Pods_JourneyPlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyPlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3003E302A5FFC8BCF2B0126E /* Pods_JourneyPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BBA81121403FD4415534222 /* Pods_JourneyPlan_JourneyPlanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyPlan_JourneyPlanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6026ECD7D461C5BA965D02B5 /* Pods-JourneyPlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlanTests.release.xcconfig"; path = "Target Support Files/Pods-JourneyPlanTests/Pods-JourneyPlanTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA06032224CBDA8F00459A49 /* JourneyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JourneyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA06032524CBDA8F00459A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA06032724CBDA8F00459A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		BA06034324CBDA9100459A49 /* JourneyPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA06034724CBDA9100459A49 /* JourneyPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlanUITests.swift; sourceTree = "<group>"; };
 		BA06034924CBDA9100459A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BE3094E2CD57A4C26450E6 /* Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0195BD2D670701E45F72A84 /* Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F4CB939327C80E9FF3BCF8FC /* Pods-JourneyPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8311263896B8E569FC6D76 /* Pods_JourneyPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC817956DE1700F4D686ACB9 /* Pods_JourneyPlanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF2D2B3D1586593FBBD4C46 /* Pods_JourneyPlan_JourneyPlanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		395586D470FA29F51398B796 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3003E302A5FFC8BCF2B0126E /* Pods_JourneyPlan.framework */,
+				5BBA81121403FD4415534222 /* Pods_JourneyPlan_JourneyPlanUITests.framework */,
+				14C747F37D13F4C373B83A57 /* Pods_JourneyPlanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DA22098D37418389D6F1559 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4CB939327C80E9FF3BCF8FC /* Pods-JourneyPlan.debug.xcconfig */,
+				0C2243A66A60F2420F428F6F /* Pods-JourneyPlan.release.xcconfig */,
+				C3BE3094E2CD57A4C26450E6 /* Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig */,
+				F0195BD2D670701E45F72A84 /* Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig */,
+				0678B37CDC7BA83120E05AB3 /* Pods-JourneyPlanTests.debug.xcconfig */,
+				6026ECD7D461C5BA965D02B5 /* Pods-JourneyPlanTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA06031924CBDA8F00459A49 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				BA06033B24CBDA9100459A49 /* JourneyPlanTests */,
 				BA06034624CBDA9100459A49 /* JourneyPlanUITests */,
 				BA06032324CBDA8F00459A49 /* Products */,
+				7DA22098D37418389D6F1559 /* Pods */,
+				395586D470FA29F51398B796 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA06034C24CBDA9100459A49 /* Build configuration list for PBXNativeTarget "JourneyPlan" */;
 			buildPhases = (
+				D812F5B427BCFC0772ABE8DB /* [CP] Check Pods Manifest.lock */,
 				BA06031E24CBDA8F00459A49 /* Sources */,
 				BA06031F24CBDA8F00459A49 /* Frameworks */,
 				BA06032024CBDA8F00459A49 /* Resources */,
+				5AF880369E2C8B8DF7F7856D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA06034F24CBDA9100459A49 /* Build configuration list for PBXNativeTarget "JourneyPlanTests" */;
 			buildPhases = (
+				2A48D3DDA0EE2A8D2AF30F52 /* [CP] Check Pods Manifest.lock */,
 				BA06033424CBDA9100459A49 /* Sources */,
 				BA06033524CBDA9100459A49 /* Frameworks */,
 				BA06033624CBDA9100459A49 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA06035224CBDA9100459A49 /* Build configuration list for PBXNativeTarget "JourneyPlanUITests" */;
 			buildPhases = (
+				5F6C39D7448B8B9259AD5318 /* [CP] Check Pods Manifest.lock */,
 				BA06033F24CBDA9100459A49 /* Sources */,
 				BA06034024CBDA9100459A49 /* Frameworks */,
 				BA06034124CBDA9100459A49 /* Resources */,
+				3F048D37F4D409D54B3A5299 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A48D3DDA0EE2A8D2AF30F52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JourneyPlanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F048D37F4D409D54B3A5299 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AF880369E2C8B8DF7F7856D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6C39D7448B8B9259AD5318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JourneyPlan-JourneyPlanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D812F5B427BCFC0772ABE8DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JourneyPlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA06031E24CBDA8F00459A49 /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		BA06034D24CBDA9100459A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4CB939327C80E9FF3BCF8FC /* Pods-JourneyPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +600,7 @@
 		};
 		BA06034E24CBDA9100459A49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2243A66A60F2420F428F6F /* Pods-JourneyPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +619,7 @@
 		};
 		BA06035024CBDA9100459A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0678B37CDC7BA83120E05AB3 /* Pods-JourneyPlanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		BA06035124CBDA9100459A49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6026ECD7D461C5BA965D02B5 /* Pods-JourneyPlanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		BA06035324CBDA9100459A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3BE3094E2CD57A4C26450E6 /* Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +686,7 @@
 		};
 		BA06035424CBDA9100459A49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0195BD2D670701E45F72A84 /* Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
