@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 import EMTNeumorphicView
 
 class ViewController: UIViewController {
@@ -19,18 +21,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchButton: EMTNeumorphicButton!
     @IBOutlet weak var placeholderImageView: UIImageView!
     
+    fileprivate let bag = DisposeBag()
+    fileprivate(set) var viewModel = MainViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureVM()
         configureTableView()
         configureTextView()
+        configureTapGesture()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    fileprivate func configureUI() {
+    private func configureUI() {
         
         textFieldView.neumorphicLayer?.elementBackgroundColor = UIColor.white.cgColor
         textFieldView.neumorphicLayer?.cornerRadius = 24
@@ -53,18 +60,80 @@ class ViewController: UIViewController {
         searchButton.neumorphicLayer?.edged = true
     }
     
-    func configureTableView() {
+    private func configureVM() {
+        
+        resetButton
+            .rx.tap
+            .throttle(.milliseconds(700), latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { _ in
+                print("tapしたよ")
+            })
+            .disposed(by: bag)
+        
+        searchButton
+            .rx.tap
+            .throttle(.milliseconds(700), latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let wself = self else { return }
+                wself.viewModel.requestLocations()
+            })
+            .disposed(by: bag)
+        
+        nlpTextView
+            .rx.text
+            .orEmpty
+            .bind(to: viewModel.inputTextsTrigger)
+            .disposed(by: bag)
+        
+        viewModel
+            .locations$
+            .subscribe(onNext: { [weak self] locations in
+                guard let wself = self else { return }
+                wself.placeholderImageView.isHidden = locations.count != 0
+                wself.tableView.reloadData()
+            })
+            .disposed(by: bag)
+        
+        viewModel
+            .historyTexts$
+            .subscribe(onNext: { [weak self] texts in
+                guard let wself = self else { return }
+                let isSelected = texts == ""
+                if isSelected {
+                    wself.resetButton.neumorphicLayer?.depthType = .concave
+                }
+                else {
+                    wself.resetButton.neumorphicLayer?.depthType = .convex
+                }
+            })
+            .disposed(by: bag)
+    }
+    
+    private func configureTableView() {
+        tableView.register(UINib(nibName: "LocationTableCell", bundle: nil),forCellReuseIdentifier:"LocationTableCell")
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
-        tableView.estimatedRowHeight = 60
+        tableView.estimatedRowHeight = 72
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.reloadData()
     }
     
-    func configureTextView() {
+    private func configureTextView() {
         nlpTextView.delegate = self
         nlpTextView.backgroundColor = .white
+    }
+    
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                guard let wself = self else { return }
+                wself.nlpTextView.resignFirstResponder()
+
+            })
+            .disposed(by: bag)
+        view.addGestureRecognizer(tapGesture)
     }
 }
 
@@ -75,43 +144,15 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.locations.value.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        return UITableViewCell()
-//
-//        switch indexPath.section {
-//        case 0:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.shopDetailHeaderCarouselTableCell, for: indexPath) else { return UITableViewCell() }
-//            cell.configure(viewModel: viewModel)
-//            cell.selectionStyle = .none
-//            return cell
-//        case 1:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.shopDetailInfoTableCell, for: indexPath) else { return UITableViewCell() }
-//            cell.configure(shop: viewModel.shop.value)
-//            cell.selectionStyle = .none
-//            return cell
-//        case 2:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.shopDetailMapTableCell, for: indexPath) else { return UITableViewCell() }
-//            cell.configure(latitude: viewModel.shop.value.latitude, longitude: viewModel.shop.value.longitude)
-//            cell.selectionStyle = .none
-//            return cell
-//        case 3:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.shopDetailFooterTableCell, for: indexPath) else { return UITableViewCell() }
-//            cell.configure()
-//            cell.selectionStyle = .none
-//            cell.footerButtonHandler = { [weak self] in
-//                guard let wself = self else { return }
-//                let shop = wself.viewModel.shop.value
-//                wself.navigationController?.pushViewController(WebViewController(url: URL(string: shop.webURLString), title: shop.name), animated: true)
-//
-//            }
-//            return cell
-//        default:
-//            return UITableViewCell()
-//        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationTableCell", for: indexPath) as! LocationTableCell
+        cell.configure(by: viewModel.locations.value[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
     }
 }
 
@@ -122,19 +163,7 @@ extension ViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
-//        switch indexPath.section {
-//        case 0:
-//            return ShopDetailHeaderCarouselTableCell.cellHeight
-//        case 1:
-//            return ShopDetailInfoTableCell.calcCellHeight(from: viewModel.shop.value)
-//        case 2:
-//            return ShopDetailMapTableCell.cellHeight
-//        case 3:
-//            return ShopDetailFooterTableCell.cellHeight
-//        default:
-//            return 0
-//        }
+        return LocationTableCell.cellHeight
     }
 }
 
