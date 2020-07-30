@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         configureTapGesture()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.requestLocations()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -65,8 +70,9 @@ class ViewController: UIViewController {
         resetButton
             .rx.tap
             .throttle(.milliseconds(700), latest: false, scheduler: MainScheduler.instance)
-            .subscribe(onNext: { _ in
-                print("tapしたよ")
+            .subscribe(onNext: { [weak self] in
+                guard let wself = self else { return }
+                wself.viewModel.inputTextsTrigger.onNext("")
             })
             .disposed(by: bag)
         
@@ -75,7 +81,7 @@ class ViewController: UIViewController {
             .throttle(.milliseconds(700), latest: false, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let wself = self else { return }
-                wself.viewModel.requestLocations()
+                wself.viewModel.searchLocation(with: "私は東京にいきたい。")
             })
             .disposed(by: bag)
         
@@ -95,7 +101,7 @@ class ViewController: UIViewController {
             .disposed(by: bag)
         
         viewModel
-            .historyTexts$
+            .inputTexts$
             .subscribe(onNext: { [weak self] texts in
                 guard let wself = self else { return }
                 let isSelected = texts == ""
