@@ -13,6 +13,6 @@ struct Location: Codable {
     var location: String
     var rate: Float
     var imageURL: String
-    var tags: [String]
+    var tagsStr: String
 }
 

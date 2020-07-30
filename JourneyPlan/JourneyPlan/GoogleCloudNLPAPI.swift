@@ -36,6 +36,8 @@ struct GoogleNLPRequest {
         
         session.dataTask(with: urlRequest) { (data, response, error) in
             if error == nil, let data = data {
+                print("Google Result --------------------------------")
+                print(String(data: data, encoding: .utf8) ?? "")
                 do {
                     let json = try JSONDecoder().decode(NLPResponse.self, from: data)
                     complation(json.entities)

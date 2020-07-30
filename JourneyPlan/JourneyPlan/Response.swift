@@ -9,32 +9,32 @@
 import Foundation
 
 struct NLPResponse: Codable {
-    let entities: [Entity]
-    let language: String
+    var entities: [Entity]
+    var language: String = ""
 }
 
 struct Entity: Codable {
-    let name: String
-    let type: String
-    let metadata: [String: String]
-    let salience: Int
-    let mentions: [EntityMention]
-    let sentiment: Sentiment?
+    var name: String = ""
+    var type: String = ""
+    var metadata: [String: String]
+    var salience: Float = 0
+    var mentions: [EntityMention]
+    var sentiment: Sentiment?
 }
 
 struct EntityMention: Codable {
-    let text: TextSpan
-    let type: String
-    let sentiment: Sentiment?
+    var text: TextSpan
+    var type: String = ""
+    var sentiment: Sentiment?
 
 }
 
 struct TextSpan: Codable {
-    let content: String
-    let beginOffset: Int
+    var content: String = ""
+    var beginOffset: Int = 0
 }
 
 struct Sentiment: Codable {
-    let magnitude: Int
-    let score: Int
+    var magnitude: Int = 0
+    var score: Int = 0
 }

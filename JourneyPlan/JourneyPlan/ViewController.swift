@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             .throttle(.milliseconds(700), latest: false, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let wself = self else { return }
-                wself.viewModel.searchLocation(with: "私は東京にいきたい。")
+                wself.viewModel.searchLocation()
             })
             .disposed(by: bag)
         
@@ -97,20 +97,6 @@ class ViewController: UIViewController {
                 guard let wself = self else { return }
                 wself.placeholderImageView.isHidden = locations.count != 0
                 wself.tableView.reloadData()
-            })
-            .disposed(by: bag)
-        
-        viewModel
-            .inputTexts$
-            .subscribe(onNext: { [weak self] texts in
-                guard let wself = self else { return }
-                let isSelected = texts == ""
-                if isSelected {
-                    wself.resetButton.neumorphicLayer?.depthType = .concave
-                }
-                else {
-                    wself.resetButton.neumorphicLayer?.depthType = .convex
-                }
             })
             .disposed(by: bag)
     }
