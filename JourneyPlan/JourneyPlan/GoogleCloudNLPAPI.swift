@@ -11,7 +11,7 @@ import Foundation
 struct GoogleNLPRequest {
     
     static let session = URLSession.shared
-    static let googleAPIKey = "AIzaSyDV5UNPOj3y2cVZSSbhtKUeNLJupbAtdK0"
+    static let googleAPIKey = APIKey.googleNLP
     static var googleURL: URL {
         return URL(string: "https://language.googleapis.com/v1/documents:analyzeEntities?key=\(googleAPIKey)")!
     }

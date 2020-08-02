@@ -22,6 +22,7 @@
 		BA06035C24CBF15300459A49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06035B24CBF15300459A49 /* Location.swift */; };
 		BA06035E24D2915500459A49 /* GoogleCloudNLPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06035D24D2915500459A49 /* GoogleCloudNLPAPI.swift */; };
 		BA06036024D298E800459A49 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06035F24D298E800459A49 /* Response.swift */; };
+		BA06036224D6509400459A49 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06036124D6509400459A49 /* APIKey.swift */; };
 		CD8311263896B8E569FC6D76 /* Pods_JourneyPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3003E302A5FFC8BCF2B0126E /* Pods_JourneyPlan.framework */; };
 		EC817956DE1700F4D686ACB9 /* Pods_JourneyPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C747F37D13F4C373B83A57 /* Pods_JourneyPlanTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		BA06035B24CBF15300459A49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BA06035D24D2915500459A49 /* GoogleCloudNLPAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudNLPAPI.swift; sourceTree = "<group>"; };
 		BA06035F24D298E800459A49 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BA06036124D6509400459A49 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C3BE3094E2CD57A4C26450E6 /* Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0195BD2D670701E45F72A84 /* Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; path = "Target Support Files/Pods-JourneyPlan-JourneyPlanUITests/Pods-JourneyPlan-JourneyPlanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F4CB939327C80E9FF3BCF8FC /* Pods-JourneyPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyPlan.debug.xcconfig"; path = "Target Support Files/Pods-JourneyPlan/Pods-JourneyPlan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BA06035B24CBF15300459A49 /* Location.swift */,
 				BA06035D24D2915500459A49 /* GoogleCloudNLPAPI.swift */,
 				BA06035F24D298E800459A49 /* Response.swift */,
+				BA06036124D6509400459A49 /* APIKey.swift */,
 			);
 			path = JourneyPlan;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				BA06035E24D2915500459A49 /* GoogleCloudNLPAPI.swift in Sources */,
 				BA06032824CBDA8F00459A49 /* SceneDelegate.swift in Sources */,
 				BA06035C24CBF15300459A49 /* Location.swift in Sources */,
+				BA06036224D6509400459A49 /* APIKey.swift in Sources */,
 				BA06035624CBEEB300459A49 /* LocationTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
